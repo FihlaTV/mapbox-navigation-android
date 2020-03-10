@@ -404,7 +404,7 @@ public class NavigationViewModel extends AndroidViewModel {
 
   private void addNavigationListeners() {
     navigation.registerRouteProgressObserver(navigationViewVm);
-    navigation.unregisterLocationObserver(navigationViewVm);
+    navigation.registerLocationObserver(navigationViewVm);
     navigation.registerOffRouteObserver(offRouteListener);
     navigation.registerVoiceInstructionsObserver(voiceInstructionsObserver);
     navigation.registerRoutesObserver(routesObserver);
@@ -461,8 +461,7 @@ public class NavigationViewModel extends AndroidViewModel {
     }
   }
 
-  private void updateReplayEngine(DirectionsRoute route) {
-    locationEngineConductor.updateSimulatedRoute(route);
+  private void updateReplayEngine(DirectionsRoute route) { locationEngineConductor.updateSimulatedRoute(route);
   }
 
   private void endNavigation() {
