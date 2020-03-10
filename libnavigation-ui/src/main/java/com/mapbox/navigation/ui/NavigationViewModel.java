@@ -248,6 +248,7 @@ public class NavigationViewModel extends AndroidViewModel {
     navigation.unregisterRouteProgressObserver(navigationViewVm);
     navigation.unregisterLocationObserver(navigationViewVm);
     navigation.unregisterVoiceInstructionsObserver(voiceInstructionsObserver);
+    navigation.unregisterOffRouteObserver(offRouteListener);
     navigation.unregisterRoutesObserver(routesObserver);
     navigation.stopTripSession();
   }
